@@ -1,0 +1,172 @@
+Crystal Reports
+---------------
+
+12 pm - 1 pm
+
+git - 
+
+------------------------------------------
+
+Crystal Report
+--------------
+
+data from the data base
+
+front end (dot net, java, Web app)
+
+crystal reports
+---------------
+crystal reports  -> VB 6.0
+
+Crystal reports  -> Java (Web applications)
+
+Crystal reports  -> dot net
+
+
+Crystal reports Server
+----------------------
+
+Crystal Reports ->  Business Objects
+
+SAP -> Bobj
+
+
+
+CR 8.0
+------
+drill down
+----------
+Country
+   States
+     District
+        Cities
+	   Area
+	     Individual
+
+
+Extract data from the database and print it on a sheet of paper
+
+
+C:\Users\Kiran\OneDrive\Desktop
+
+
+Entity Relationship Diagram
+---------------------------
+
+Master  (PK)
+
+Child   (FK)
+
+
+Products (Master table) Product_id (PK)
+prodid   prodname    price    qty
+P0001    Dairymilk    1$      500
+
+
+
+Sales  (Child Table) Product_id (FK)
+
+tran_id  prodid	   qty
+
+TR0001   P0001	    5
+TR0012	 P0001      2
+TR0025	 P0001      6
+TR0030	 P0001      10
+
+------------------------------------------------------------------------------------
+
+Products
+  prodid
+  prodname
+  category
+  unitprice
+  unitsinstock
+  discontinued
+
+
+category - Chocolates, Biscuits, Wafers, Beverages
+
+  
+
+SQL statement
+-------------
+select prodid, prodname, unitprice from products
+
+all columns from the table
+--------------------------
+select * from products
+
+group by
+--------
+select * from products sum of unitprice groupby category
+
+
+
+chocolates
+----------
+1
+.
+.
+10
+
+Biscuits
+--------
+11
+.
+.
+15
+Wafers
+------
+16
+.
+.
+23
+
+Beverages
+---------
+24
+.
+.
+33
+
+-------------------------------------------------------------------------------
+
+? - single character
+
+* - series of characters
+
+
+all names starting with a letter a
+
+a* = starts with a and after there are n number of characters
+
+??a* = ?? first two characters can be anything
+
+Filter the records from Employee table
+---------------------------------------
+1. Employee first name starts with M
+
+2. last name has the last but one character as 'a'
+
+3. Title is sales representative
+
+4. Title is not sales representative
+
+5. Birthdate is between 1/1/1955 and 31/12/1965
+
+6. Hiredate is not between 1/1/1993 and 31/12/1993
+
+7. Address has a character 'rd'
+
+8. region is null
+
+9. region is not null
+
+10. 
+
+
+
+
+
+
+

@@ -1,0 +1,21 @@
+
+**** Log file opened at 2026-05-10 14:19:30.889462 UTC+05:30 (India Standard Time), Encoding UTF-8
+NW RFC Library: SDK variant, Release 750 Patch Level 14
+Compilation date          : Jun 15 2024 06:07:33
+CPIC library              : 754.2024.02.29 version 3
+NI library                : 40
+Kernel Release            : 754 Patch Level 325
+Current working directory : C:\Training\Crystal Reports\Day01
+Program                   : crw64
+Process ID                : 29812
+User                      : Kiran
+Hardware                  : PC with Windows NT 8x AMD64 Level 6 (Mod 142 Step 12)
+Binary Type               : 64bit
+Operating_system          : Windows NT 10.0
+Hostname                  : LAPTOP-3JQ97KCV
+IP address                : 192.168.56.1
+IPv6 address              : fe80::50a2:b97c:bcfe:6a03
+Global trace level        : 0
+
+2026-05-10 14:19:30.891283 [24220] >> Info entry
+	Did not find config file C:\Training\Crystal Reports\Day01\sapnwrfc.ini.
