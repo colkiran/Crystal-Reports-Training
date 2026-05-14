@@ -1,0 +1,544 @@
+Crystal Reports
+---------------
+
+12 pm - 1 pm
+
+git - 
+
+------------------------------------------
+
+Crystal Report
+--------------
+
+data from the data base
+
+front end (dot net, java, Web app)
+
+crystal reports
+---------------
+crystal reports  -> VB 6.0
+
+Crystal reports  -> Java (Web applications)
+
+Crystal reports  -> dot net
+
+
+Crystal reports Server
+----------------------
+
+Crystal Reports ->  Business Objects
+
+SAP -> Bobj
+
+
+
+CR 8.0
+------
+drill down
+----------
+Country
+   States
+     District
+        Cities
+	   Area
+	     Individual
+
+
+Extract data from the database and print it on a sheet of paper
+
+
+C:\Users\Kiran\OneDrive\Desktop
+
+
+Entity Relationship Diagram
+---------------------------
+
+Master  (PK)
+
+Child   (FK)
+
+
+Products (Master table) Product_id (PK)
+prodid   prodname    price    qty
+P0001    Dairymilk    1$      500
+
+
+
+Sales  (Child Table) Product_id (FK)
+
+tran_id  prodid	   qty
+
+TR0001   P0001	    5
+TR0012	 P0001      2
+TR0025	 P0001      6
+TR0030	 P0001      10
+
+------------------------------------------------------------------------------------
+
+Products
+  prodid
+  prodname
+  category
+  unitprice
+  unitsinstock
+  discontinued
+
+
+category - Chocolates, Biscuits, Wafers, Beverages
+
+  
+
+SQL statement
+-------------
+select prodid, prodname, unitprice from products
+
+all columns from the table
+--------------------------
+select * from products
+
+group by
+--------
+select * from products sum of unitprice groupby category
+
+
+
+chocolates
+----------
+1
+.
+.
+10
+
+Biscuits
+--------
+11
+.
+.
+15
+Wafers
+------
+16
+.
+.
+23
+
+Beverages
+---------
+24
+.
+.
+33
+
+-------------------------------------------------------------------------------
+
+? - single character
+
+* - series of characters
+
+
+all names starting with a letter a
+
+a* = starts with a and after there are n number of characters
+
+??a* = ?? first two characters can be anything
+
+
+
+Filter the records from Employee table
+---------------------------------------
+1. Employee first name starts with M
+
+2. last name has the last second character as 'a'
+
+3. Title is sales representative
+
+4. Title is not sales representative
+
+5. Birthdate is between 1/1/1955 and 31/12/1965
+
+6. Hiredate is not between 1/1/1993 and 31/12/1993
+
+7. Address has a character 'rd'
+
+8. region is null
+
+9. region is not null
+
+
+Report Data Sorting, Grouping, and Summarizing
+----------------------------------------------
+
+1. Data Sorting 
+
+
+2. Grouping
+
+	a. create a report group the data by category name or category id, display the sum of 		unit price, count of products in each category
+	b. create another group in the same report by supplier id and display the sum of unit 		price
+
+
+Conditional Formatting
+----------------------
+Table - Products
+
+Condition
+---------
+if price is between 0 and 10 	=> Red 
+
+if price is between 11 and 25   => Orange
+
+if price is between 26 and 45	=> Brown
+
+if price is between 45 and 100	=> blue
+
+greater than 100 => green
+
+
+Formulas Basics
+---------------
+Table - Employees
+
+1. calculate age
+2. calculate the experience
+
+
+
+Overloads
+DateDiff (intervalType, startDateTime, endDateTime)
+
+DateDiff (intervalType, startDateTime, endDateTime, firstDayOfWeek)
+
+Arguments
+intervalType is a String expression that is the interval of time you use to calculate the difference between startDateTime and endDateTime. Possible values can be:
+
+Interval type value		Description
+
+yyyy				Year
+
+q				Quarter
+
+m				Month
+
+y				Day of year
+
+d				Day (both "y" and "d" find the difference in days)
+
+w				Number of weeks between startDateTime and endDateTime
+
+ww				Number of firstDayOfWeek's between startDateTime and 					endDateTime
+
+h				Hour
+
+n				Minute
+
+s				Second
+
+
+startDateTime is the first DateTime value used in calculating the difference.
+
+endDateTime is the second DateTime value used in calculating the difference.
+
+firstDayOfWeek is an optional constant specifying the first day of the week. If not specified, crSunday is assumed. See Day of Week constants.
+
+Returns
+A Number value.
+
+Action
+DateDiff returns a number of time intervals between two specified dates.
+
+Examples
+The following examples are applicable to both Basic and Crystal syntax:
+
+Use DateDiff with the "d" or "y" interval type parameter to find the number of days between two dates:
+
+DateDiff ("d", #10/7/1999#, #10/10/1999#)
+
+Returns 3.
+
+Use DateDiff with the "yyyy" interval type parameter to find the number of years difference between two dates. This use of DateDiff is the same as finding the difference between the year of endDateTime and the year of startDateTime.
+
+DateDiff ("yyyy", #10/7/1999#, #2/10/2005#)
+
+Returns 6.
+
+DateDiff ("yyyy", #12/31/1999#, #1/1/2000#)
+
+Returns 1 (a 1 year difference), even though there is only a 1 day difference between the dates.
+
+DateDiff ("yyyy", #1/1/1999#, #12/31/1999#)
+
+Returns 0 (a 0 year difference), even though there is a 364 day difference.
+
+
+-----------------------------------------------------------------
+
+OrderDate => date when the order was placed
+
+ShippedDate => date when the order was shipped
+
+RequiredDate => the date when the customer needs the order
+
+Orders Table
+------------
+1. difference between orderdate and shippeddate
+
+2. late delivery (calculate using requireddate)
+
+
+
+Shipid		Freight		Rtotal
+1		  10		  10
+1		  15		  25
+1		  12		  37
+1		  30		  67
+1		  22		  89	Restart
+2		  15		  15
+2		  20		  35
+2		  25		  60
+2		  10		  70
+
+
+order details and Orders
+-------------------
+pie chart on unitprice based on the suppliers
+
+
+Charts
+------
+1. Total freight charges charged by each shipper
+
+2. No of products supplies by each supplier
+
+3. top 10 customers who have made the highest billing
+
+4. top 5 products that were sold highest each year (orderdate)
+
+5. graph that shows the no of late deliveries vs on time or earlier
+
+
+ prc   - 200
+ qty   - 5
+ disc  - 20%
+
+(prc * qty) - (prc * qty * disc)
+(200 * 5) - (200 * 5 * 0.2)
+1000 - (1000 * 0.2)
+1000 - 200
+800
+
+
+Sub Reports
+------------
+
+its a report embedded inside another report that runs independently but it is displayed inside the main report
+
+when do we use sub reports
+--------------------------
+different data sources - when we data from another database or table that can't be joined to the main report
+
+independent calculations - when we want to run separate queries on summaries that don't fit into the main report's grouping logic
+
+supplementary info - show related but distinct details (eg: customer contact details in main report along side order totals)
+
+complex relationships - when tables have no direct relationship or would require overly complicated joins
+
+
+Variables in formulas
+---------------------
+Crystal Reports supports 
+
+1. Numbers 	- Numbervar 	- Age
+
+2. String 	- Stringvar 	- Name
+
+3. Date 	- Datevar 	- Birthdate
+
+4. Time		- Timevar	- Logintime
+
+5. Boolean	- Booleanvar	- Married - 	Yes / No
+
+6. Currency	- Currencyvar	- Salary
+
+
+--------------------------------------------------------------------
+
+Products Table
+--------------
+variables 	values to assign
+---------	----------------
+prodid 		Productid		Numbervar
+
+prodname	ProductName		Stringvar
+
+stock	    	unitsinstock		Numbervar
+
+price		unitprice		Currency
+
+discprc		price * disc		currency
+
+discntd		discontinued		Boolean
+
+------------------------------------------Day04----------------------------------------
+
+Scope of a variable
+--------------------
+Global
+Local
+Shared
+
+
+Local Variables
+---------------
+Scope -  exists only within the formula field where they are declared
+
+Lifetime - gets created when the formula field is added into the report or executed
+
+usage - useful for temporary calculations inside a single formula
+
+
+Local Numbervar age := 60
+
+scope is local by default
+
+
+Global Variable
+---------------
+scope - can be declared in one formula and accessed in another formula within the same report
+
+Lifetime - persists through out the report processing
+
+usage - ideal for passing values between formulas across the report
+
+Global Numbervar x;
+x := 500;
+
+once the value of x is set then it can be used in any other formula
+
+
+Shared Variable
+---------------
+scope: Allow sharing values not only formulas but also share between main report and subreport
+
+Lifetime: persists across report and subreport boundries
+
+Usage: Essential when you need to transfer data between main report and the subreport
+
+Shared Numbervar z := 100;
+
+Instances when the formula field will get executed
+---------------------------------------------------
+
+1. WhileReadingRecords  (default)
+
+2. WhilePrintingRecords
+
+3. Evaluate After -> evaluateAfter(formulafield)
+
+
+Shared Variable
+---------------
+Scenario - We want to calculate the Total Sales per Customer in a subreport (based on Orders table) and then display the total in the main report footer
+
+
+Main Report -  Customers 
+
+Sub Report  - Orders, Order_Details
+
+Custom Functions
+----------------
+1. function to calculate the difference between two dates
+
+2. convert currency  values to native currency
+
+Create a crosstab report for 
+	a. number of orders handled by each employee per year
+
+	b. number of orders shipped by each shipper and the total freight charges year wise
+
+
+
+Create a report that shows the total number of orders handled by each employee
+
+
+---------------------------------------------Day05-------------------------------------------------
+
+use highlight expert to show product prices between 50 and 85
+
+use alert for orders that were delivered late
+
+Create an alert of customers who have made total billing more than 25000
+
+
+
+-----------------------------------------------------------------------------------------------
+
+Problem 1: Find Customers who have not placed any orders
+
+Problem 2: Identify Products Below Reorder Level
+
+Problem 3: Calculate Profit Margin per Product
+
+
+Join Types
+----------
+1. Inner Join		- only related records from both related tables
+
+2. Left Outer Join	- all recs from LHS table and only related recs from RHS table
+	
+3. Right Outer Join	- all recs from RHS table and only related recs from LHS table.
+
+4. Full outer Join	- all recs from both tables does not check for relations
+
+
+emp
+Empid 	EmpName	 DeptID
+
+001	Jack	 Dept01
+002	Slater	 Dept02
+003     Mike	 Dept01
+004 	Layla	 Dept03
+005	Tina	 
+
+dept
+Deptid 	 Deptname
+Dept01	 HR
+Dept02	 MKT
+Dept03   FIN
+Dept04   IT
+Dept05	 Proc
+
+
+emp inner join dept
+
+
+inner join
+-----------
+001, 002, 003, 004
+
+emp left join dept
+left join
+---------
+all recs from emp table
+related recs from dept table
+
+emp - 001, 002, 003, 004, 005
+dept - dept01, dept02, dept03
+
+
+emp right join dept
+-------------------
+all recs from dept table
+related recs from emp table
+
+dept01, dept02, dept03, dept04, dept05
+001, 002, 003, 004
+
+
+
+
+
+
+
+
+
+
